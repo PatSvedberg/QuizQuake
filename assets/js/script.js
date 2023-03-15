@@ -1,1 +1,1 @@
-console.log("test");
+const question = document.getElementById("question-area").innerText;
