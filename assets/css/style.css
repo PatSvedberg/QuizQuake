@@ -4,9 +4,27 @@ body {
 
 header {
     background-color: purple;
-    text-align: center;
+    display: flex;
+    align-items: center;
+}
+#scoreboard {
+    display: flex;
+    margin-left: 55px;
+    align-items: center;
+    gap: 5px;
 }
 
+h1 {
+    margin-left: 10px;
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
 #game-container {
     position: absolute;
     display: flex;
