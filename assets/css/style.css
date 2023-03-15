@@ -9,6 +9,8 @@ header {
 
 #game-container {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     background-color: gold;
     margin-left: auto;
     margin-right: auto;
@@ -29,8 +31,24 @@ header {
     background-color: cornflowerblue;
 }
 
-#answer-div {
+#answers-area {
+    display: flex;
     flex-direction: column;
+
+    justify-content: center;
+    width: 75%;
+    height: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    background-color: coral;
+
 }
 
-.answer-button {}
+.answer-button {
+
+    margin: 5px 10px 5px 10px;
+}
+#submit-button {
+    margin: 15px 10px 5px 10px;
+}
