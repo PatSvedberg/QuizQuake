@@ -30,6 +30,7 @@ h2 {
 h3 {
 
 }
+/*Game container. Containing questions and answers*/
 #game-container {
     position: absolute;
     display: flex;
@@ -41,7 +42,7 @@ h3 {
     width: 100%;
 
 }
-
+/*Question area. Containing current question*/
 #question-area {
     width: 85%;
     min-height: 45%;
@@ -54,6 +55,7 @@ h3 {
     background-color: cornflowerblue;
 }
 
+/*Answer area. Containing answer and submit button*/
 #answers-area {
     display: flex;
     flex-direction: column;
@@ -68,10 +70,12 @@ h3 {
 
 }
 
+/*All buttons style*/
 .answer-button {
 
     margin: 5px 10px 5px 10px;
 }
+/*Submit button style*/
 #submit-button {
     margin: 15px 10px 15px 10px;
 }
