@@ -79,7 +79,9 @@ h3 {
     flex-direction: row;
     background-color: cyan;
     margin: 10px 25px 10px 25px;
-    justify-content: center;
+    justify-content: space-between;
+}
+.answer-number {
 }
 
 /*All buttons style*/
