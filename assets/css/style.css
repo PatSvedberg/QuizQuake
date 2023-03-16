@@ -80,6 +80,12 @@ h3 {
     background-color: cyan;
     margin: 10px 25px 10px 25px;
     justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 40px;
+}
+.answer-div p {
+    font-size: 20px;
+    margin: 5px 10px 5px 10px;
 }
 .answer-number {
 }
