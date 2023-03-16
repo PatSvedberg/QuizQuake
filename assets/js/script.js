@@ -8,9 +8,13 @@ let availableQuestion = [];
 
 let questions = [
     {
-        question: "What is the deepest point on Earth?";
-        Answer1: "test1";
-        Answer2: "test2";
+        question: "What is the deepest point on Earth?",
+        Answer1: "test1",
+        Answer2: "test2",
+        Answer3: "test3",
+        Answer4: "test4",
+        answer: 2
+
     }
 ]
 
