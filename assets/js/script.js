@@ -9,8 +9,7 @@ let questionCounter = 0;
 let availableQuestions = []
 
 //Questions array
-let question = [
-    {
+let questions = [{
         question: "What is life?",
         answer1: "Hell",
         answer2: "Who knows",
@@ -34,7 +33,7 @@ const MAX_QUESTIONS = 4; //Questions per game
 runGame = () => {
     questionCounter = 0;
     score = 0;
-    availableQuestions = [...question];
+    availableQuestions = [...questions];
     getNewQuestion();
 }
 getNewQuestion = () => {
@@ -59,17 +58,31 @@ getNewQuestion = () => {
 }
 
 answers.forEach(answer => {
-    answer.addEventListener('click', e =>
-    if(!acceptingAnswers) return;
+            answer.addEventListener('click', e => {
+                    if (!acceptingAnswers) return;
 
-    acceptingAnswers = false;
-    const selectedAnswer = e.target;
-    const selectedCorrectAnswer = selectedAnswer.dataset['number'];
+                    acceptingAnswers = false;
+                    const selectedAnswer = e.target;
+                    const selectedCorrectAnswer = selectedAnswer.dataset['number'];
 
-    let classToApply = selectedAnswer == currentQuestion.answer = 'correct' : 'incorrect';
-    
-    )
-}) 
+                    let classToApply = selectedAnswer == currentQuestion.answer ? 'correct': 'incorrect';
 
+                    if (classToApply === 'correct') {
+                        incrementScore(SCORE_POINTS)
+                    }
 
+                    selectedAnswer.parentElement.classList.add(classToApply)
 
+                    setTimeout(() => {
+                            selectedAnswer.parentElement.classList.remove(classToApply)
+                            getNewQuestion()
+                        }, 1000)
+                    })
+            })
+
+incrementScore = num => {
+    score +=num;
+    scoreText.innerText = score;
+}
+
+runGame();
