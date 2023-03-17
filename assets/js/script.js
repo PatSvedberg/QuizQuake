@@ -1,21 +1,31 @@
-let question = document.getElementById("question-text");
-let answer = Array.from(document.getElementsByClassName('answer-text'));
+const question = document.getElementById("question-text"); //Get question text
+const answers = Array.from(document.querySelectorAll(".answer-text")); //Get all answer texts
+const scoreNumber = document.getElementById("score"); //Get score number
 
 let currentQuestion = {};
-let acceptingAnswer = true;
+let acceptingAnswers = true;
 let score = 0;
-let availableQuestion = [];
+let questionCounter = 0;
+let availableQuestions = []
 
-let questions = [
+let question = [
     {
-        question: "What is the deepest point on Earth?",
-        Answer1: "test1",
-        Answer2: "test2",
-        Answer3: "test3",
-        Answer4: "test4",
-        answer: 2
-
+        question: "What is life?",
+        answer1: "Hell",
+        answer2: "Who knows",
+        answer3: "Heaven",
+        answer4: "42",
+        answer: 1,
+    },
+    {
+        question: "What is death?",
+        answer1: "Hell",
+        answer2: "Who knows",
+        answer3: "Heaven",
+        answer4: "42",
+        answer: 4,
     }
 ]
 
-//question.innerHTML = "What is the deepest point on Earth?";
+
+
