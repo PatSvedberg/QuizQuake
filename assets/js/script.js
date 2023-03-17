@@ -8,6 +8,7 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = []
 
+//Questions array
 let question = [
     {
         question: "What is life?",
@@ -26,6 +27,49 @@ let question = [
         answer: 4,
     }
 ]
+
+const SCORE_POINTS = 1; //Score per question
+const MAX_QUESTIONS = 4; //Questions per game
+
+runGame = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...question];
+    getNewQuestion();
+}
+getNewQuestion = () => {
+    if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
+        localStorage.setItem('moreRecentScore', score);
+
+        return window.location.assign('/end.html');
+    }
+    questionCounter++;
+
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionIndex];
+    question.innerText = currentQuestion.question;
+
+    answers.forEach(answer => {
+        const number = answer.dataset['number'];
+        answer.innerText = currentQuestion['answer' + number];
+    })
+    availableQuestions.splice(questionIndex, 1)
+
+    acceptingAnswers = true;
+}
+
+answers.forEach(answer => {
+    answer.addEventListener('click', e =>
+    if(!acceptingAnswers) return;
+
+    acceptingAnswers = false;
+    const selectedAnswer = e.target;
+    const selectedCorrectAnswer = selectedAnswer.dataset['number'];
+
+    let classToApply = selectedAnswer == currentQuestion.answer = 'correct' : 'incorrect';
+    
+    )
+}) 
 
 
 
