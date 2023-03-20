@@ -1,88 +1,95 @@
-const question = document.getElementById("question-text"); //Get question text
-const answers = Array.from(document.querySelectorAll(".answer-text")); //Get all answer texts
-const scoreNumber = document.getElementById("score"); //Get score number
-
-let currentQuestion = {};
-let acceptingAnswers = true;
-let score = 0;
-let questionCounter = 0;
-let availableQuestions = []
-
-//Questions array
 let questions = [{
-        question: "What is life?",
-        answer1: "Hell",
-        answer2: "Who knows",
-        answer3: "Heaven",
-        answer4: "42",
-        answer: 1,
+        id: 1,
+        question: "Who had a hit with 'Smells Like Teen Spirit' in 1991?",
+        answer: "Nirvana",
+        option: [
+            "Oasis",
+            "Pearl Jam",
+            "Nirvana",
+            "Soundgarden"
+        ]
     },
     {
-        question: "What is death?",
-        answer1: "Hell",
-        answer2: "Who knows",
-        answer3: "Heaven",
-        answer4: "42",
-        answer: 4,
-    }
-]
+        id: 2,
+        question: "Which boy band released 'I Want It That Way' in 1999?",
+        answer: "Backstreet Boys",
+        option: [
+            "Backstreet Boys",
+            "NSYNC",
+            "98 Degrees",
+            "Boyz II Men"
+        ]
+    },
+    {
+        id: 3,
+        question: "Which female artist sang 'Genie in a Bottle' in 1999?",
+        answer: "Christina Aguilera",
+        option: [
+            "Britney Spears",
+            "Christina Aguilera",
+            "Jennifer Lopez",
+            "Destiny's Child"
+        ]
+    },
+    {
+        id: 4,
+        question: "Which rap artist released 'California Love' in 1995?",
+        answer: "2Pac",
+        option: [
+            "2Pac",
+            "Notorious B.I.G.",
+            "Snoop Dogg",
+            "Ice Cube"
+        ]
+    },
+    {
+        id: 5,
+        question: "Who sang 'Wonderwall' in 1995?",
+        answer: "Oasis",
+        option: [
+            "Oasis",
+            "Blur",
+            "Radiohead",
+            "The Verve"
+        ]
+    },
+];
 
-const SCORE_POINTS = 1; //Score per question
-const MAX_QUESTIONS = 4; //Questions per game
+let question_count = 0;
+let points = 0;
 
-runGame = () => {
-    questionCounter = 0;
-    score = 0;
-    availableQuestions = [...questions];
-    getNewQuestion();
-}
-getNewQuestion = () => {
-    if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-        localStorage.setItem('moreRecentScore', score);
+window.onload = function () {
+    showQuestion(question_count);
+    showOptions(question_count);
+};
 
-        return window.location.assign('/end.html');
-    }
-    questionCounter++;
+function showQuestion(count) {
+    let question = document.getElementById("question-text");
 
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = availableQuestions[questionIndex];
-    question.innerText = currentQuestion.question;
-
-    answers.forEach(answer => {
-        const number = answer.dataset['number'];
-        answer.innerText = currentQuestion['answer' + number];
-    })
-    availableQuestions.splice(questionIndex, 1)
-
-    acceptingAnswers = true;
-}
-
-answers.forEach(answer => {
-            answer.addEventListener('click', e => {
-                    if (!acceptingAnswers) return;
-
-                    acceptingAnswers = false;
-                    const selectedAnswer = e.target;
-                    const selectedCorrectAnswer = selectedAnswer.dataset['number'];
-
-                    let classToApply = selectedAnswer == currentQuestion.answer ? 'correct': 'incorrect';
-
-                    if (classToApply === 'correct') {
-                        incrementScore(SCORE_POINTS)
-                    }
-
-                    selectedAnswer.parentElement.classList.add(classToApply)
-
-                    setTimeout(() => {
-                            selectedAnswer.parentElement.classList.remove(classToApply)
-                            getNewQuestion()
-                        }, 1000)
-                    })
-            })
-
-incrementScore = num => {
-    score +=num;
-    scoreText.innerText = score;
+    question.innerText = `${questions[count].question}`
 }
 
-runGame();
+function showOptions(count) {
+    let options = document.getElementById("option_group");
+    let [first, second, third, fourth] = questions[count].option;
+
+    options.innerHTML = `<div id="answers-area">
+    <div class="answer-div">
+        <p>1</p>
+        <p class = "answer-text">${first}</p>
+    </div>
+    <div class="answer-div">
+        <p>2</p>
+        <p class = "answer-text">${second}</p>
+    </div>
+    <div class="answer-div">
+        <p>3</p>
+        <p class = "answer-text">${third}</p>
+    </div>
+    <div class="answer-div">
+        <p>4</p>
+        <p class = "answer-text">${fourth}</p>
+    </div>
+    <button id="submit-button" data-type="submit">Submit</button>
+</div>`
+}
