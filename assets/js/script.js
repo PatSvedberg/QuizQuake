@@ -55,8 +55,8 @@ let questions = [{
     },
 ];
 
-let question_count = 0;
-let points = 0;
+let question_count = 4;
+let points = 3;
 
 window.onload = function () {
     showQuestion(question_count);
@@ -80,4 +80,17 @@ function showOptions(count) {
     option2.innerText = `${second}`;
     option3.innerText = `${third}`;
     option4.innerText = `${fourth}`;
+}
+
+let score = document.getElementById("score")
+score.innerText = `${points}`
+
+function nextQ(){
+    if(question_count == questions.length -1){
+        alert("End of game");
+        console(question_count);
+    }
+    else{
+        question_count++;
+    }
 }
