@@ -70,26 +70,14 @@ function showQuestion(count) {
 }
 
 function showOptions(count) {
-    let options = document.getElementById("option_group");
+    let option1 = document.getElementById("answer1");
+    let option2 = document.getElementById("answer2");
+    let option3 = document.getElementById("answer3");
+    let option4 = document.getElementById("answer4");
     let [first, second, third, fourth] = questions[count].option;
 
-    options.innerHTML = `<div id="answers-area">
-    <div class="answer-div">
-        <p>1</p>
-        <p class = "answer-text">${first}</p>
-    </div>
-    <div class="answer-div">
-        <p>2</p>
-        <p class = "answer-text">${second}</p>
-    </div>
-    <div class="answer-div">
-        <p>3</p>
-        <p class = "answer-text">${third}</p>
-    </div>
-    <div class="answer-div">
-        <p>4</p>
-        <p class = "answer-text">${fourth}</p>
-    </div>
-    <button id="submit-button" data-type="submit">Submit</button>
-</div>`
+    option1.innerText = `${first}`;
+    option2.innerText = `${second}`;
+    option3.innerText = `${third}`;
+    option4.innerText = `${fourth}`;
 }
