@@ -8,55 +8,65 @@ body {
 }
 
 header {
-    background-color: purple;
+    background-color: darkblue;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid orange;
 }
+
+header h1 {
+    color: orange;
+}
+
 #scoreboard {
     display: flex;
     margin-left: 55px;
     align-items: center;
     gap: 5px;
 }
+
+#scoreboard h2,
+h3 {
+    color: orange;
+}
+
 h1 {
     margin-left: 10px;
 }
 
-h2 {
-
-}
-
-h3 {
-
-}
 /*Game container. Containing questions and answers*/
 #game-container {
     position: absolute;
     display: flex;
     flex-direction: column;
-    background-color: gold;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 45%, rgba(2,104,167,1) 100%);
     margin-left: auto;
     margin-right: auto;
-    height: 95%;
+    height: 94%;
     width: 100%;
 
 }
+
 /*Question area. Containing current question*/
 #question-area {
     width: 85%;
-    min-height: 45%;
-    height: 45%;
+    height: 25%;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
     text-align: center;
-    background-color: cornflowerblue;
+    background-color: transparent;
 }
+
 #question-text {
     display: flex;
+    padding: 10px;
     align-content: center;
+    align-items: center;
     font-size: 20px;
+    color: white;
 }
 
 /*Answer area. Containing answer and submit button*/
@@ -70,9 +80,10 @@ h3 {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
-    background-color: coral;
+    background-color: transparent;
 
 }
+
 .answer-div {
     display: flex;
     flex-direction: row;
@@ -82,11 +93,11 @@ h3 {
     border: 1px solid black;
     border-radius: 40px;
 }
+
 .answer-div p {
     font-size: 20px;
     margin: 5px 10px 5px 10px;
-}
-.answer-number {
+
 }
 
 /*All buttons style*/
@@ -94,7 +105,27 @@ h3 {
 
     margin: 5px 10px 5px 10px;
 }
+
 /*Submit button style*/
 #submit-button {
     margin: 15px 10px 15px 10px;
+}
+
+#next-btn-div {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, 
+    rgba(1,0,18,0.6306897759103641) 20%, rgba(0,0,0,1) 52%, rgba(22,167,2,1) 100%);
+    width: 50%;
+    border: 1px solid linear-gradient(90deg, rgba(2,0,36,0) 0%, 
+    rgba(1,0,18,0.6306897759103641) 20%, rgba(0,0,0,1) 52%, rgba(22,167,2,1) 100%);
+    border-radius: 40px;
+}
+
+#next-btn-div p {
+    padding: 5px;
+    color: white;
+
 }

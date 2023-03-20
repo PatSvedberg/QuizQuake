@@ -11,7 +11,7 @@
     <meta name="keywords" content="Quiz, game, learning, four answers,">
 
     <link rel="stylesheet" href="assets/css/style.css">
-    
+
     <title>QuizQuake</title>
 </head>
 
@@ -21,7 +21,7 @@
         <h1>Quiz Quake</h1>
         <div id="scoreboard">
             <h3>Score:</h3>
-            <h2 id = "score">0</h2>
+            <h2 id="score">0</h2>
         </div>
 
     </header>
@@ -33,7 +33,7 @@
         </div>
         <!--Div for buttons-->
         <div id="answers-area">
-            
+
             <div class="answer-div">
                 <p>1</p>
                 <p id="answer1">Answer 1</p>
@@ -50,9 +50,12 @@
                 <p>4</p>
                 <p id="answer4">Answer 4</p>
             </div>
-            <button onclick="nextQ()">Next Question</button>
         </div>
-    
+
+        <div id="next-btn-div" onclick="nextQ()">
+            <p>Next Question</p>
+        </div>
+
     </section>
     <script src="assets/js/script.js"></script>
 </body>
