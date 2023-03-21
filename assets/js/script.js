@@ -65,12 +65,14 @@ window.onload = function () {
     showOptions(question_count);
 };
 
+// Adds the question text from the questions array to the question text area
 function showQuestion(count) {
     let question = document.getElementById("question-text");
 
     question.innerText = `${questions[count].question}`
 }
 
+// Adds the options text from the questions array to the answers buttons
 function showOptions(count) {
     let option1 = document.getElementById("answer1");
     let option2 = document.getElementById("answer2");
@@ -85,7 +87,7 @@ function showOptions(count) {
 }
 
 
-
+// Next Question button function
 function nextQ() {
     if (question_count == questions.length - 1) {
         alert("End of game");
