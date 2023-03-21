@@ -97,13 +97,14 @@ h1 {
     font-size: 20px;
     margin: 5px 10px 5px 10px;
 }
-.answer-div:hover{
+
+.answer-div:hover {
     cursor: pointer;
     border: 5px solid white;
     color: #341f97;
 }
 
-.answer-div.active{
+.answer-div.active {
     background-color: white;
     color: #fff;
 }

@@ -82,6 +82,7 @@
         }
     };
     ```
+    * 2023-03-21: Manage to increment the score when going the next question, problem is that it always gives a score even if you've picked the wrong answer.
 
     ## Notes:
 

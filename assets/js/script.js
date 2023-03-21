@@ -1,4 +1,3 @@
-
 let question_count = 0;
 let points = 0;
 let score = document.getElementById("score")
@@ -86,9 +85,22 @@ function showOptions(count) {
     option4.innerText = `${fourth}`;
 }
 
+function checkAnswer() {
+    let answerOption = document.getElementsByClassName("option");
+    for (let i = 0; i < answerOption.length; i++) {
+        if (answerOption[i].innerText === questions[question_count].answer) {
+            if (answerOption[i].classList.contains("option")) {
+                points++;
+                score.innerText = `${points}`;
+            }
+        }
+    }
+}
+
 
 // Next Question button function
 function nextQ() {
+    checkAnswer();
     if (question_count == questions.length - 1) {
         alert("End of game");
         console.log(question_count);
@@ -98,4 +110,4 @@ function nextQ() {
         showQuestion(question_count);
         showOptions(question_count);
     }
-};
+}
