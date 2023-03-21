@@ -4,7 +4,8 @@
 }
 
 body {
-    background-color: grey;
+    background: rgb(2, 0, 36);
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 45%, rgba(2, 104, 167, 1) 100%);
 }
 
 header {
@@ -39,8 +40,6 @@ h1 {
     position: absolute;
     display: flex;
     flex-direction: column;
-    background: rgb(2,0,36);
-    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 45%, rgba(2,104,167,1) 100%);
     margin-left: auto;
     margin-right: auto;
     height: 94%;
@@ -115,12 +114,12 @@ h1 {
     display: flex;
     justify-content: center;
     align-content: flex-end;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, 
-    rgba(1,0,18,0.6306897759103641) 20%, rgba(0,0,0,1) 52%, rgba(22,167,2,1) 100%);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%,
+            rgba(1, 0, 18, 0.6306897759103641) 20%, rgba(0, 0, 0, 1) 52%, rgba(22, 167, 2, 1) 100%);
     width: 50%;
-    border: 1px solid linear-gradient(90deg, rgba(2,0,36,0) 0%, 
-    rgba(1,0,18,0.6306897759103641) 20%, rgba(0,0,0,1) 52%, rgba(22,167,2,1) 100%);
+    border: 1px solid linear-gradient(90deg, rgba(2, 0, 36, 0) 0%,
+            rgba(1, 0, 18, 0.6306897759103641) 20%, rgba(0, 0, 0, 1) 52%, rgba(22, 167, 2, 1) 100%);
     border-radius: 40px;
 }
 
