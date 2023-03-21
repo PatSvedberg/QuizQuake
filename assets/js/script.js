@@ -1,3 +1,8 @@
+
+let question_count = 0;
+let points = 0;
+let score = document.getElementById("score")
+score.innerText = `${points}`
 let questions = [{
         id: 1,
         question: "Who had a hit with 'Smells Like Teen Spirit' in 1991?",
@@ -55,9 +60,6 @@ let questions = [{
     },
 ];
 
-let question_count = 0;
-let points = 0;
-
 window.onload = function () {
     showQuestion(question_count);
     showOptions(question_count);
@@ -82,8 +84,7 @@ function showOptions(count) {
     option4.innerText = `${fourth}`;
 }
 
-let score = document.getElementById("score")
-score.innerText = `${points}`
+
 
 function nextQ() {
     if (question_count == questions.length - 1) {
@@ -92,6 +93,7 @@ function nextQ() {
     } else {
         question_count++;
         console.log("Another one!");
+        showQuestion(question_count);
+        showOptions(question_count);
     }
-
 };
