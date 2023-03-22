@@ -1,4 +1,5 @@
 let question_count = 0;
+let correct = false;
 let points = 0;
 let score = document.getElementById("score")
 score.innerText = `${points}`
@@ -64,6 +65,8 @@ window.onload = function () {
     showOptions(question_count);
 };
 
+
+
 // Adds the question text from the questions array to the question text area
 function showQuestion(count) {
     let question = document.getElementById("question-text");
@@ -85,29 +88,46 @@ function showOptions(count) {
     option4.innerText = `${fourth}`;
 }
 
-function checkAnswer() {
-    let answerOption = document.getElementsByClassName("option");
-    for (let i = 0; i < answerOption.length; i++) {
-        if (answerOption[i].innerText === questions[question_count].answer) {
-            if (answerOption[i].classList.contains("option")) {
-                points++;
-                score.innerText = `${points}`;
-            }
+
+let options = document.getElementsByClassName("option");
+for (let i = 0; i < options.length; i++) {
+    options[i].addEventListener("click", function (event) {
+        let clickedOption = event.target.innerText;
+        let correctAnswer = questions[question_count].answer;
+        if (clickedOption === correctAnswer) {
+            alert("Correct!");
+            correct = true; // set "correct" variable to true if answer is correct
         }
-    }
+        if (clickedOption !== correctAnswer) {
+            alert("false!");
+            correct = false; // set "false" variable to true if answer is incorrect
+        }
+    });
 }
 
+function givePoint() { //Updates points
+    points++;
+    console.log("Points given");
+    score.innerText = `${points}`;
+}
 
-// Next Question button function
 function nextQ() {
-    checkAnswer();
     if (question_count == questions.length - 1) {
-        alert("End of game");
+        alert("End of game. Your score is: " + points);
         console.log(question_count);
-    } else {
-        question_count++;
-        console.log("Another one!");
+    }
+    if (correct) { // check if "correct" variable is true
+        givePoint(); //if so give point
+        question_count++; //Next question
         showQuestion(question_count);
         showOptions(question_count);
+        correct = false; // reset "correct" variable to false
+
+    }
+    else {
+        question_count++; //Next question
+        showQuestion(question_count);
+        showOptions(question_count);
+        correct = false; // reset "correct" variable to false
     }
 }
