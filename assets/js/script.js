@@ -1,7 +1,8 @@
-let continueBtn = document.getElementById("continue");
-let options = document.getElementsByClassName("option");
-let tutWindow = document.getElementById("tutorial");
-let gameWindow = document.getElementById("game-container");
+let continueBtn = document.getElementById("continue"); //continue button in tutorial window div
+let options = document.getElementsByClassName("option"); // Answer buttons
+let tutWindow = document.getElementById("tutorial"); // Tutorial Window
+let gameWindow = document.getElementById("game-container"); // Game-container window
+let nextBtn = document.getElementById("next-btn-div");
 let question_count = 0;
 let correct = false;
 let points = 0;
@@ -70,8 +71,8 @@ window.onload = function () {
 };
 
 continueBtn.addEventListener("click", function () {
-    tutWindow.style.display = 'none';
-    gameWindow.style.display = 'flex';
+    tutWindow.style.display = "none";
+    gameWindow.style.display = "flex";
 });
 
 
@@ -99,14 +100,13 @@ function showOptions(count) {
 
 for (let i = 0; i < options.length; i++) {
     options[i].addEventListener("click", function (event) {
+        nextBtn.style.display = "flex";
         let clickedOption = event.target.innerText;
         let correctAnswer = questions[question_count].answer;
         if (clickedOption === correctAnswer) {
-            alert("Correct!");
             correct = true; // set "correct" variable to true if answer is correct
         }
         if (clickedOption !== correctAnswer) {
-            alert("false!");
             correct = false; // set "false" variable to true if answer is incorrect
         }
     });
@@ -129,11 +129,13 @@ function nextQ() {
         showQuestion(question_count);
         showOptions(question_count);
         correct = false; // reset "correct" variable to false
+        nextBtn.style.display = "none";
 
     } else {
         question_count++; //Next question
         showQuestion(question_count);
         showOptions(question_count);
         correct = false; // reset "correct" variable to false
+        nextBtn.style.display = "none";
     }
 }
