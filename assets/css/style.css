@@ -6,13 +6,17 @@
 body {
     background: rgb(2, 0, 36);
     background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 45%, rgba(2, 104, 167, 1) 100%);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     background-color: darkblue;
     display: flex;
-    align-items: center;
     border-bottom: 1px solid orange;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 header h1 {
@@ -35,10 +39,23 @@ h1 {
     margin-left: 10px;
 }
 
+#tutorial {
+    display: flexbox;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+    width: 70%;
+    background-color: aquamarine;
+}
+#continue {
+    background-color: red;
+}
+
 /*Game container. Containing questions and answers*/
 #game-container {
     position: absolute;
-    display: flex;
+    display: none;
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;

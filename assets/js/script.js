@@ -1,3 +1,7 @@
+let continueBtn = document.getElementById("continue");
+let options = document.getElementsByClassName("option");
+let tutWindow = document.getElementById("tutorial");
+let gameWindow = document.getElementById("game-container");
 let question_count = 0;
 let correct = false;
 let points = 0;
@@ -65,6 +69,11 @@ window.onload = function () {
     showOptions(question_count);
 };
 
+continueBtn.addEventListener("click", function () {
+    tutWindow.style.display = 'none';
+    gameWindow.style.display = 'flex';
+});
+
 
 
 // Adds the question text from the questions array to the question text area
@@ -88,8 +97,6 @@ function showOptions(count) {
     option4.innerText = `${fourth}`;
 }
 
-
-let options = document.getElementsByClassName("option");
 for (let i = 0; i < options.length; i++) {
     options[i].addEventListener("click", function (event) {
         let clickedOption = event.target.innerText;
@@ -123,8 +130,7 @@ function nextQ() {
         showOptions(question_count);
         correct = false; // reset "correct" variable to false
 
-    }
-    else {
+    } else {
         question_count++; //Next question
         showQuestion(question_count);
         showOptions(question_count);
