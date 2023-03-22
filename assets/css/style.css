@@ -43,8 +43,16 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 250px;
+    height: 100%;
+    width: 75%;
     background-color: aquamarine;
+}
+#tut-text {
+    margin: 10px;
+}
+
+#tut-list {
+    list-style: none;
 }
 
 #continue {
