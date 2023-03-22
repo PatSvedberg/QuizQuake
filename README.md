@@ -83,6 +83,16 @@
     };
     ```
     * 2023-03-21: Manage to increment the score when going the next question, problem is that it always gives a score even if you've picked the wrong answer.
+    * 2023-03-22: Fixed the scoring. I made a boolean to trigger if the player clicked on the correct answer, and false if incorrect.<br<br>
+   ## Old code:
+
+    ![alt text](assets/images/oldcode.png)
+
+   ## New code:
+
+    ![alt text](assets/images/newCode.PNG)
+
+    
 
     ## Notes:
 
