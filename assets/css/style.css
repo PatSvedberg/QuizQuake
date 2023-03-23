@@ -108,6 +108,8 @@ h1 {
 #endScore {
     font-size: 50px;
     color: gold;
+    display: flex;
+    justify-content: center;
 }
 
 /*Game container. Containing questions and answers*/
