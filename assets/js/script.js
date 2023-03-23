@@ -2,7 +2,10 @@ let continueBtn = document.getElementById("continue"); //continue button in tuto
 let options = document.getElementsByClassName("option"); // Answer buttons
 let tutWindow = document.getElementById("tutorial"); // Tutorial Window
 let gameWindow = document.getElementById("game-container"); // Game-container window
+let headerBar = document.getElementById("headerBar") // Header bar
 let nextBtn = document.getElementById("next-btn-div"); // Next question button
+let endGame = document.getElementById("endDiv"); // End game screen
+let endScore = document.getElementById("endScore") // Your end score
 let question_count = 0; // What question is shown
 let correct = false; // Is the correct answer selected?
 let points = 0; // Points for the scoreboard
@@ -73,6 +76,7 @@ window.onload = function () {
 continueBtn.addEventListener("click", function () {
     tutWindow.style.display = "none";
     gameWindow.style.display = "flex";
+    headerBar.style.display = "flex";
 });
 
 
@@ -114,14 +118,16 @@ for (let i = 0; i < options.length; i++) {
 
 function givePoint() { //Updates points
     points++;
-    console.log("Points given");
     score.innerText = `${points}`;
 }
 
 function nextQ() {
     if (question_count == questions.length - 1) {
-        alert("End of game. Your score is: " + points);
         console.log(question_count);
+        gameWindow.style.display = "none";
+        endGame.style.display = "flex";
+        endScore.innerText = `${points} points!`;
+
     }
     if (correct) { // check if "correct" variable is true
         givePoint(); //if so give point
