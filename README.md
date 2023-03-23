@@ -30,7 +30,15 @@
 
     # Pages:
     ## Index:
-    In this quiz, the player is presented with four possible answers and is required to pick the correct one.
+    There is only one page, but 3 different divs and sections are activated and deactivated inside it.
+
+    * The Tutorial div:
+        * What the player i greeted with. It was a small explanation of the game and how to play it. At the buttom of the div there is a "continue" button that closes the div and opens the game-container.
+    * The Game-container section:
+        * In this quiz, the player is presented with four possible answers and is required to pick the correct one. After answering the last question the game-container closes and the end game div opens.
+    * The End div
+        * The end game screen. Here the final score is presented.
+
 
     # UX
     ## Demographics:
