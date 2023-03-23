@@ -145,8 +145,15 @@ function nextQ() {
         endGame.style.display = "flex";
         header.style.display = "none";
         endScore.innerText = `${points}`;
-
     }
+    if (question_count == questions.length - 1 && correct === true) {
+        givePoint();
+        gameWindow.style.display = "none";
+        endGame.style.display = "flex";
+        header.style.display = "none";
+        endScore.innerText = `${points}`;
+    }
+
     if (correct) { // check if "correct" variable is true
         givePoint(); //if so give point
         question_count++; //Next question

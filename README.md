@@ -112,7 +112,11 @@ This is what i scetched up before I started coding.
 ## New code:
 ![Image of new code](assets/images/newCode.PNG "Image of new code")´
 
-* 2023-03-23: Found bug where no points is given if answering the last question correct.
+* 2023-03-23: Manage to make use key "5" to go to next question if a answer is selected. Have not manage to select questions with key 1-4.
+
+* 2023-03-23: Manage to select answers with keys 1-4 (I think). But have not manage to make the psudo class "hover" or "active" to trigger.
+
+* 2023-03-23: Found bug where no points is given if answering the last question correct. - FIXED
 
 
 ## Validators:
