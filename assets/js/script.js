@@ -2,15 +2,16 @@ let continueBtn = document.getElementById("continue"); //continue button in tuto
 let options = document.getElementsByClassName("option"); // Answer buttons
 let tutWindow = document.getElementById("tutorial"); // Tutorial Window
 let gameWindow = document.getElementById("game-container"); // Game-container window
-let headerBar = document.getElementById("headerBar") // Header bar
+let header = document.querySelector('header'); // Header bar
 let nextBtn = document.getElementById("next-btn-div"); // Next question button
 let endGame = document.getElementById("endDiv"); // End game screen
 let endScore = document.getElementById("endScore") // Your end score
 let question_count = 0; // What question is shown
 let correct = false; // Is the correct answer selected?
 let points = 0; // Points for the scoreboard
-let score = document.getElementById("score")
+let score = document.getElementById("score") // Score text inside the header
 score.innerText = `${points}`
+// Question and answer array
 let questions = [{
         id: 1,
         question: "Who had a hit with 'Smells Like Teen Spirit' in 1991?",
@@ -74,9 +75,9 @@ window.onload = function () {
 };
 
 continueBtn.addEventListener("click", function () {
-    tutWindow.style.display = "none";
-    gameWindow.style.display = "flex";
-    headerBar.style.display = "flex";
+    tutWindow.style.display = "none"; //Closes the tutorial window
+    gameWindow.style.display = "flex"; // Opens the game
+    header.style.display = "flex"; // Opens the header
 });
 
 
@@ -126,6 +127,7 @@ function nextQ() {
         console.log(question_count);
         gameWindow.style.display = "none";
         endGame.style.display = "flex";
+        header.style.display = "none";
         endScore.innerText = `${points} points!`;
 
     }
