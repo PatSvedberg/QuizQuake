@@ -20,7 +20,7 @@ body {
 header {
     display: none;
     justify-content: center;
-    border-bottom: 2px solid rgba(0, 85, 166, 1);
+    border-bottom: 2px solid rgba(0, 255, 255, 1);
     width: 100%;
     padding: 10px;
 }
@@ -54,10 +54,10 @@ h1 {
     width: auto;
     margin: 80px 20px 0px 20px;
     padding: 26px;
-    box-shadow: 0px 0px 50px 0px #0ff;
-    border-bottom: 2px solid rgba(0, 85, 166, 1);
-    border-left: 2px solid rgba(0, 85, 166, 1);
-    border-right: 2px solid rgba(0, 85, 166, 1);
+    box-shadow: 0px 0px 50px 0px rgb(0, 255, 255);
+    border-bottom: 2px solid rgba(0, 255, 255, 1);
+    border-left: 2px solid rgba(0, 255, 255, 1);
+    border-right: 2px solid rgba(0, 255, 255, 1);
     border-radius: 50px;
     align-items: center;
     flex-direction: column;
@@ -83,7 +83,7 @@ h1 {
     margin: 25px 25px 25px 25px;
     color: white;
     box-shadow: 0px 0px 15px 0px #0ff;
-    border: 2px solid rgba(0, 55, 166, 1);
+    border: 2px solid rgba(0, 255, 255, 1);
     border-radius: 50px;
     padding: 5px 30px 5px 30px;
 }
@@ -93,9 +93,9 @@ h1 {
     margin: 80px 20px 0px 20px;
     padding: 26px;
     box-shadow: 0px 0px 50px 0px #0ff;
-    border-bottom: 2px solid rgba(0, 85, 166, 1);
-    border-left: 2px solid rgba(0, 85, 166, 1);
-    border-right: 2px solid rgba(0, 85, 166, 1);
+    border-bottom: 2px solid rgba(0, 255, 255, 1);
+    border-left: 2px solid rgba(0, 255, 255, 1);
+    border-right: 2px solid rgba(0, 255, 255, 1);
     border-radius: 50px;
     align-items: center;
     flex-direction: column;
@@ -133,9 +133,9 @@ h1 {
     margin-bottom: 10px;
     text-align: center;
     box-shadow: 0px 0px 50px 0px #0ff;
-    border-bottom: 2px solid rgba(0, 85, 166, 1);
-    border-left: 2px solid rgba(0, 85, 166, 1);
-    border-right: 2px solid rgba(0, 85, 166, 1);
+    border-bottom: 2px solid rgba(0, 255, 255, 1);
+    border-left: 2px solid rgba(0, 255, 255, 1);
+    border-right: 2px solid rgba(0, 255, 255, 1);
     border-radius: 50px;
 }
 
@@ -164,9 +164,9 @@ h1 {
     justify-content: space-between;
     background-color: transparent;
     color: white;
-    border-bottom: 1px solid rgba(0, 85, 166, 1);
-    border-top: 1px solid rgba(0, 85, 166, 1);
-    border-right: 1px solid rgba(0, 85, 166, 1);
+    border-bottom: 1px solid rgba(0, 255, 255, 1);
+    border-top: 1px solid rgba(0, 255, 255, 1);
+    border-right: 1px solid rgba(0, 255, 255, 1);
     border-radius: 50px;
 }
 
@@ -183,18 +183,18 @@ h1 {
 }
 
 .answer-div:hover {
-    border-bottom: 1px solid rgba(0, 85, 166, 1);
-    border-top: 1px solid rgba(0, 85, 166, 1);
-    border-right: 1px solid rgba(0, 85, 166, 1);
+    border-bottom: 1px solid rgba(0, 255, 255, 1);
+    border-top: 1px solid rgba(0, 255, 255, 1);
+    border-right: 1px solid rgba(0, 255, 255, 1);
     border-radius: 50px;
     box-shadow: 0px 0px 25px 0px #0ff;
     color: gold;
 }
 
 .answer-div.active {
-    border-bottom: 1px solid rgba(0, 85, 166, 1);
-    border-top: 1px solid rgba(0, 85, 166, 1);
-    border-right: 1px solid rgba(0, 85, 166, 1);
+    border-bottom: 1px solid rgba(0, 255, 255, 1);
+    border-top: 1px solid rgba(0, 255, 255, 1);
+    border-right: 1px solid rgba(0, 255, 255, 1);
     border-radius: 50px;
     box-shadow: 0px 0px 25px 0px #0ff;
     color: gold;
@@ -214,7 +214,7 @@ h1 {
 #next-btn-div {
     display: none;
     box-shadow: 0px 0px 15px 0px #0ff;
-    border: 2px solid rgba(0, 55, 166, 1);
+    border: 2px solid rgba(0, 255, 255, 1);
     border-radius: 50px;
     padding: 5px 10px 5px 90px;
     margin-right: 12px;
