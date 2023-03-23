@@ -70,6 +70,7 @@ let questions = [{
     },
 ];
 
+// Loads question and answers
 window.onload = function () {
     showQuestion(question_count);
     showOptions(question_count);
@@ -90,6 +91,7 @@ playAgainBtn.addEventListener("click", function () {
     showOptions(question_count);
     points = 0; // Reset Scoreboard
     score.innerText = `${points}`;
+    nextBtn.style.display = "none";
 });
 
 
@@ -115,6 +117,7 @@ function showOptions(count) {
     option4.innerText = `${fourth}`;
 }
 
+// Toogle correct or incorrect selected option
 for (let i = 0; i < options.length; i++) {
     options[i].addEventListener("click", function (event) {
         nextBtn.style.display = "flex";
@@ -129,11 +132,13 @@ for (let i = 0; i < options.length; i++) {
     });
 }
 
-function givePoint() { //Updates points
+ //Updates points
+function givePoint() {
     points++;
     score.innerText = `${points}`;
 }
 
+//Next question button function
 function nextQ() {
     if (question_count == questions.length - 1) {
         gameWindow.style.display = "none";
@@ -158,3 +163,13 @@ function nextQ() {
         nextBtn.style.display = "none";
     }
 }
+
+//If the next button is visible you can press "5" to click it
+document.addEventListener('keydown', function (e) {
+    if (e.code === 'Digit5' && nextBtn.style.display === "flex") {
+        nextQ();
+    }
+});
+
+
+  
