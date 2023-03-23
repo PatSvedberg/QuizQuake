@@ -4,8 +4,12 @@
 }
 
 body {
-    background: rgb(2, 0, 36);
-    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 45%, rgba(2, 104, 167, 1) 100%);
+    /*background-image: url("../images/circle_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;*/
+    background-color: black;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -14,18 +18,21 @@ body {
 }
 
 header {
-    background-color: darkblue;
     display: none;
-    border-bottom: 1px solid orange;
+    border-bottom: 2px solid rgba(0, 85, 166, 1);
     width: 100%;
-    margin-bottom: 20px;
+    padding: 10px;
 }
 #headerBar{
     display: none;
 }
 
 header h1 {
-    color: orange;
+    color: white;
+}
+header h2 {
+    box-shadow: 0px 0px 50px 0px #0ff;
+    color:red;
 }
 
 #scoreboard {
@@ -37,7 +44,7 @@ header h1 {
 
 #scoreboard h2,
 h3 {
-    color: orange;
+    color: white;
 }
 
 h1 {
@@ -46,17 +53,21 @@ h1 {
 
 #tutorial {
     display: flex;
-    flex-direction: column;
     width: 75%;
-    background-color: darkblue;
+    margin-top: 80px;
+    box-shadow: 0px 0px 50px 0px #0ff;
+    border-bottom: 2px solid rgba(0, 85, 166, 1);
+    border-left: 2px solid rgba(0, 85, 166, 1);
+    border-right: 2px solid rgba(0, 85, 166, 1);
+    border-radius: 50px;
     align-items: center;
-    border: 5px solid orange;
+    flex-direction: column;
 }
 
 #tut-text {
     margin: 10px;
     text-align: center;
-    color: orange;
+    color: white;
 }
 
 #tut-list {
@@ -65,20 +76,17 @@ h1 {
 }
 
 #howtoplay {
-    border-bottom: 1px solid orange;
+    border-bottom: 1px solid white;
     font-size: 24px;
 }
 
 #continue {
-    display: flex;
-    background-color: orange;
-    padding: 5px 10px 5px 10px;
-    margin-bottom: 5px;
-    justify-content: center;
-    border: 2px solid darkblue;
-    border-radius: 40px;
-    color: darkblue;
-    font-size: 18px;
+    margin: 25px 25px 25px 25px;
+    color: white;
+    box-shadow: 0px 0px 15px 0px #0ff;
+    border: 2px solid rgba(0, 55, 166, 1);
+    border-radius: 50px;
+    padding: 5px 30px 5px 30px;
 }
 #endDiv{
     display: none;
@@ -107,43 +115,47 @@ h1 {
 #question-area {
     width: 85%;
     height: 25%;
-    margin-top: 10px;
+    margin-top: 35px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
     text-align: center;
-    background-color: transparent;
+    box-shadow: 0px 0px 50px 0px #0ff;
+    border-bottom: 2px solid rgba(0, 85, 166, 1);
+    border-left: 2px solid rgba(0, 85, 166, 1);
+    border-right: 2px solid rgba(0, 85, 166, 1);
+    border-radius: 50px;
 }
 
 #question-text {
     display: flex;
-    padding: 10px;
-    align-content: center;
+    padding: 45px;
     align-items: center;
     font-size: 20px;
-    color: orange;
-    border-bottom: 2px solid orange;
+    color: white;
+
 }
 
 /*Answer area. Containing answer and submit button*/
 #answers-area {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     width: 85%;
-    height: 350px;
     margin: 15px auto 30px auto;
-    background-color: transparent;
 }
 
 .answer-div {
     display: flex;
     flex-direction: row;
-    background-color: cyan;
+    background-color: transparent;
     margin: 10px 25px 10px 25px;
     justify-content: space-between;
-    border: 1px solid black;
-    border-radius: 40px;
+    background-color: transparent;
+    color: white;
+    border-bottom: 1px solid rgba(0, 85, 166, 1);
+    border-top: 1px solid rgba(0, 85, 166, 1);
+    border-right: 1px solid rgba(0, 85, 166, 1);
+    border-radius: 50px;
 }
 
 .option {
@@ -159,10 +171,12 @@ h1 {
 }
 
 .answer-div:hover {
-    cursor: pointer;
-    border: 5px solid orange;
-    color: orange;
-    background-color: darkblue;
+    border-bottom: 1px solid rgba(0, 85, 166, 1);
+    border-top: 1px solid rgba(0, 85, 166, 1);
+    border-right: 1px solid rgba(0, 85, 166, 1);
+    border-radius: 50px;
+    box-shadow: 0px 0px 25px 0px #0ff;
+    color: gold;
 }
 
 .answer-div.active {
@@ -183,14 +197,11 @@ h1 {
 
 #next-btn-div {
     display: none;
-    justify-content: center;
-    align-content: flex-end;
-    margin-bottom: 5px;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgba(1, 0, 18, 0.6306897759103641) 20%, rgba(0, 0, 0, 1) 52%, rgba(22, 167, 2, 1) 100%);
-    width: 50%;
-    border: 1px solid linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgba(1, 0, 18, 0.6306897759103641) 20%, rgba(0, 0, 0, 1) 52%, rgba(22, 167, 2, 1) 100%);
-    border-radius: 40px;
+    box-shadow: 0px 0px 15px 0px #0ff;
+    border: 2px solid rgba(0, 55, 166, 1);
+    border-radius: 50px;
+    padding: 5px 10px 5px 90px;
+    margin-right: 12px;
 }
 
 #next-btn-div p {
