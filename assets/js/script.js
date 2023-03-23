@@ -4,6 +4,7 @@ let tutWindow = document.getElementById("tutorial"); // Tutorial Window
 let gameWindow = document.getElementById("game-container"); // Game-container window
 let header = document.querySelector('header'); // Header bar
 let nextBtn = document.getElementById("next-btn-div"); // Next question button
+let playAgainBtn = document.getElementById("playAgain"); // Play Again button
 let endGame = document.getElementById("endDiv"); // End game screen
 let endScore = document.getElementById("endScore") // Your end score
 let question_count = 0; // What question is shown
@@ -74,10 +75,21 @@ window.onload = function () {
     showOptions(question_count);
 };
 
+// Tutorial continue button
 continueBtn.addEventListener("click", function () {
     tutWindow.style.display = "none"; //Closes the tutorial window
     gameWindow.style.display = "flex"; // Opens the game
     header.style.display = "flex"; // Opens the header
+});
+
+playAgainBtn.addEventListener("click", function () {
+    endGame.style.display = "none"; //Closes the End game window
+    tutWindow.style.display = "flex"; //Closes the tutorial window
+    question_count = 0; //Reset questions
+    showQuestion(question_count);
+    showOptions(question_count);
+    points = 0; // Reset Scoreboard
+    score.innerText = `${points}`;
 });
 
 
@@ -124,7 +136,6 @@ function givePoint() { //Updates points
 
 function nextQ() {
     if (question_count == questions.length - 1) {
-        console.log(question_count);
         gameWindow.style.display = "none";
         endGame.style.display = "flex";
         header.style.display = "none";
