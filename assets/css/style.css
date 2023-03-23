@@ -1,3 +1,6 @@
+/*Google Font import*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Prata&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -22,16 +25,23 @@ header {
     padding: 10px;
 }
 
-/*Header h1 and h3 style*/
-header h1,
-header h3 {
+header h1
+    {
     color: white;
+    font-family: 'Prata', serif;
+    border-bottom: 2px solid white;
 }
 
 /*Header h2 style*/
 header h2 {
     box-shadow: 0px 0px 70px 0px #0ff;
     color: gold;
+}
+
+/*Header h3 style*/
+header h3 {
+    color: white;
+    font-family: 'Prata', serif;
 }
 
 /*Scoreboard style*/
@@ -59,6 +69,7 @@ header h2 {
 
 /*Tutorial text style*/
 #tut-text {
+    font-family: 'Prata', serif;
     margin: 10px;
     text-align: center;
     color: white;
@@ -72,6 +83,7 @@ header h2 {
 
 /*How to play text style*/
 #howtoplay {
+    font-family: 'Prata', serif;
     border-bottom: 1px solid white;
     font-size: 24px;
 }
@@ -80,6 +92,7 @@ header h2 {
 #continue {
     margin: 25px 25px 25px 25px;
     color: white;
+    font-family: 'Prata', serif;
     box-shadow: 0px 0px 15px 0px #0ff;
     border: 2px solid rgba(0, 255, 255, 1);
     border-radius: 50px;
@@ -107,12 +120,14 @@ header h2 {
     text-align: center;
     font-size: 20px;
     color: white;
+    font-family: 'Prata', serif;
 }
 
 /*End game div end score style*/
 #endScore {
     font-size: 50px;
     color: gold;
+    font-family: 'Prata', serif;
     display: flex;
     justify-content: center;
 }
@@ -151,6 +166,7 @@ header h2 {
     align-items: center;
     font-size: 20px;
     color: white;
+    font-family: 'Prata', serif;
 
 }
 
@@ -171,6 +187,7 @@ header h2 {
     justify-content: space-between;
     background-color: transparent;
     color: white;
+    font-family: 'Prata', serif;
     border-bottom: 1px solid rgba(0, 255, 255, 1);
     border-top: 1px solid rgba(0, 255, 255, 1);
     border-right: 1px solid rgba(0, 255, 255, 1);
@@ -238,5 +255,6 @@ header h2 {
 #next-btn-div p {
     padding: 5px;
     color: white;
+    font-family: 'Prata', serif;
 
 }
