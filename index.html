@@ -14,7 +14,6 @@
 
     <title>QuizQuake</title>
 </head>
-
 <body>
     <!--Header with Game logo and scoreboard-->
     <header class="headerBar">
@@ -23,68 +22,64 @@
             <h3>Score:</h3>
             <h2 id="score">0</h2>
         </div>
-
     </header>
-    <!--Game container with question and buttons for answers and submiting answer-->
-    <div id="game-container">
-        <!--Div for question-->
-        <div id="question-area">
-            <p id="question-text">Here be questionz...!</p>
-        </div>
-        <!--Div for buttons-->
-        <div id="answers-area">
-            <div class="answer-div">
-                <p id="answer1" class="option">Answer 1</p>
+
+    <div>
+        <!--Game container with question and buttons for answers and submiting answer-->
+        <div id="game-container">
+            <!--Div for question-->
+            <div id="question-area">
+                <p id="question-text">Here be questionz...!</p>
             </div>
-            <div class="answer-div">
-                <p id="answer2" class="option">Answer 2</p>
+            <!--Div for buttons-->
+            <div id="answers-area">
+                <div class="answer-div">
+                    <p id="answer1" class="option">Answer 1</p>
+                </div>
+                <div class="answer-div">
+                    <p id="answer2" class="option">Answer 2</p>
+                </div>
+                <div class="answer-div">
+                    <p id="answer3" class="option">Answer 3</p>
+                </div>
+                <div class="answer-div">
+                    <p id="answer4" class="option">Answer 4</p>
+                </div>
             </div>
-            <div class="answer-div">
-                <p id="answer3" class="option">Answer 3</p>
-            </div>
-            <div class="answer-div">
-                <p id="answer4" class="option">Answer 4</p>
+
+            <div id="next-btn-div" onclick="nextQ()">
+                <p>Next</p>
             </div>
         </div>
 
-        <div id="next-btn-div" onclick="nextQ()">
-            <p>Next</p>
+        <div id="tutorial">
+            <div id="tut-text">
+                <p id="howtoplay"><strong>How to play:</strong></p><br>
+                <ul id="tut-list">
+                    <li>Pick one of four answers.</li>
+                    <li>When you've picked an answer click the 'Next Question'-button to confirm your answer.</li>
+                </ul>
+            </div>
+            <div id="continue"><strong>Continue</strong></div>
         </div>
-    </div>
+        <div id="categories">
+            <h2 id="h2Cat">Pick a category</h2>
+            <div class="category-div">
+                <p id="category1" class="category">90's music</p>
+            </div>
+            <div class="category-div">
+                <p id="category2" class="category">Space</p>
+            </div>
+        </div>
 
-    <div id="tutorial">
-        <div id="tut-text">
-            <p id="howtoplay"><strong>How to play:</strong></p><br>
-            <ul id="tut-list">
-                <li>Pick one of four answers.</li>
-                <li>When you've picked an answer click the 'Next Question'-button to confirm your answer.</li>
-            </ul>
-        </div>
-        <div id="continue"><strong>Continue</strong></div>
-    </div>
-    <div id="categories">
-        <h2 id ="h2Cat">Pick a category</h2>
-        <div class="category-div">
-            <p id="category1" class="category">90's music</p>
-        </div>
-        <div class="category-div">
-            <p id="category2" class="category">Space</p>
-        </div>
-        <div class="category-div">
-            <p id="category3" class="category">Nothing yet</p>
-        </div>
-        <div class="category-div">
-            <p id="category4" class="category">Nothing yet</p>
-        </div>
-    </div>
-
-    <div id="endDiv">
-        <div>
-            <p>End of game!<br> You got a score of:</p>
-            <h2 id="endScore">x</h2>
-        </div>
-        <div id="playAgain">
-            <p>Play again?</p>
+        <div id="endDiv">
+            <div>
+                <p>End of game!<br> You got a score of:</p>
+                <h2 id="endScore">x</h2>
+            </div>
+            <div id="playAgain">
+                <p>Play again?</p>
+            </div>
         </div>
     </div>
     <script src="assets/js/script.js"></script>
