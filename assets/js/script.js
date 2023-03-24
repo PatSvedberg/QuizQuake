@@ -272,11 +272,12 @@ function givePoint() {
 * Next question button function
 */
 function nextQ() {
-    if (question_count == questions.length - 1) {
+    if (question_count == questions.length - 1 && correct === false) {
         gameWindow.style.display = "none";
         endGame.style.display = "flex";
         header.style.display = "none";
-        endScore.innerText = `${points}`;
+        endScore.innerText = `${points} of 5`;
+        alert("Incorrect! - No point added");
     }
     if (question_count == questions.length - 1 && correct === true) {
         givePoint();
@@ -284,6 +285,7 @@ function nextQ() {
         endGame.style.display = "flex";
         header.style.display = "none";
         endScore.innerText = `${points} of 5`;
+        alert("Correct! - Point added");
     }
 
     if (correct) { // check if "correct" variable is true
@@ -293,13 +295,14 @@ function nextQ() {
         showOptions(question_count);
         correct = false; // reset "correct" variable to false
         nextBtn.style.display = "none";
-
+        alert("Correct! - Point added");
     } else {
         question_count++; //Next question
         showQuestion(question_count);
         showOptions(question_count);
         correct = false; // reset "correct" variable to false
         nextBtn.style.display = "none";
+        alert("Incorrect! - No point added");
     }
 }
 
