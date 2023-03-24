@@ -267,3 +267,9 @@ header h3 {
     font-family: 'Prata', serif;
 
 }
+
+@media (min-height: 627px) {
+    #question-text {
+        padding: 20px;
+    }
+}
