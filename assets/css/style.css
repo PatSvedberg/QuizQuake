@@ -101,7 +101,8 @@ header h3 {
 
 /*Sets default curor on hover*/
 #continue:hover {
-    cursor: default;}
+    cursor: default;
+}
 
 /*End game div style*/
 #endDiv {
@@ -152,6 +153,7 @@ header h3 {
     cursor: default;
 }
 
+/*Categories screen div*/
 #categories {
     display: none;
     width: auto;
@@ -165,6 +167,8 @@ header h3 {
     align-items: center;
     flex-direction: column;
 }
+
+/*Category button div*/
 .category-div{
     display: flex;
     flex-direction: row;
@@ -185,6 +189,7 @@ header h3 {
     cursor: default;
 }
 
+/*Category text class*/
 .category{
     display: flex;
     align-self: stretch;
@@ -193,6 +198,7 @@ header h3 {
     justify-content: center;
 }
 
+/*Category header*/
 #h2Cat {
     color: white;
     border-bottom: 1px solid rgba(0, 255, 255, 1);
@@ -332,6 +338,7 @@ header h3 {
 
 }
 
+/*media query for screens with height smaller 627px*/
 @media (min-height: 627px) {
     #question-text {
         padding: 20px;
