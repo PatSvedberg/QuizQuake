@@ -252,7 +252,7 @@ function nextQ() {
         gameWindow.style.display = "none";
         endGame.style.display = "flex";
         header.style.display = "none";
-        endScore.innerText = `${points}`;
+        endScore.innerText = `${points} of 5`;
     }
 
     if (correct) { // check if "correct" variable is true
