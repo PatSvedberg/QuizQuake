@@ -21,14 +21,12 @@ header {
     justify-content: center;
     border-bottom: 2px solid rgba(0, 255, 255, 1);
     width: 100%;
-    padding: 10px;
 }
 
 /*Header h1 style*/
 header h1 {
     color: white;
     font-family: 'Prata', serif;
-    border-bottom: 2px solid white;
 }
 
 /*Header h2 style*/
@@ -211,7 +209,6 @@ header h3 {
     display: none;
     align-items: flex-end;
     flex-direction: column;
-    margin-bottom: 10px;
 }
 
 /*Question area. Containing current question*/
