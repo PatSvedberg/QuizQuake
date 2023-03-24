@@ -11,7 +11,11 @@ let question_count = 0; // What question is shown
 let correct = false; // Is the correct answer selected?
 let points = 0; // Points for the scoreboard
 let score = document.getElementById("score") // Score text inside the header
-score.innerText = `${points}`
+let catMain = document.getElementById("categories"); //Category window
+let cat1 = document.getElementById("category1"); //Category 90's music
+let cat2 = document.getElementById("category2"); // Category Space
+score.innerText = `${points}`;
+let questArray = 0;
 // Question and answer array
 let questions = [{
         id: 1,
@@ -69,7 +73,62 @@ let questions = [{
         ]
     },
 ];
-
+let questions2 = [{
+        id: 1,
+        question: "Which planet in our solar system is closest to the Sun?",
+        answer: "Mercury",
+        option: [
+            "Venus",
+            "Mars",
+            "Mercury",
+            "Jupiter"
+        ]
+    },
+    {
+        id: 2,
+        question: "What is the name of the largest moon in our solar system?",
+        answer: "Ganymede",
+        option: [
+            "Titan",
+            "Callisto",
+            "Ganymede",
+            "Europa"
+        ]
+    },
+    {
+        id: 3,
+        question: "What is the name of the brightest star in the sky?",
+        answer: "Sirius",
+        option: [
+            "Vega",
+            "Sirius",
+            "Polaris",
+            "Betelgeuse"
+        ]
+    },
+    {
+        id: 4,
+        question: "Which planet in our solar system has the largest number of moons?",
+        answer: "Jupiter",
+        option: [
+            "Saturn",
+            "Jupiter",
+            "Neptune",
+            "Uranus"
+        ]
+    },
+    {
+        id: 5,
+        question: "What is the term used to describe the point in space where the gravitational pull is so strong that nothing can escape it?",
+        answer: "Black hole",
+        option: [
+            "Asteroid",
+            "Nebula",
+            "Supernova",
+            "Black hole"
+        ]
+    },
+];
 // Loads question and answers
 window.onload = function () {
     showQuestion(question_count);
@@ -79,9 +138,35 @@ window.onload = function () {
 // Tutorial continue button
 continueBtn.addEventListener("click", function () {
     tutWindow.style.display = "none"; //Closes the tutorial window
+    catMain.style.display = "flex"; // Opens the category window
+});
+
+cat1.addEventListener("click", function () {
+    catMain.style.display = "none"; // Close category window
     gameWindow.style.display = "flex"; // Opens the game
     header.style.display = "flex"; // Opens the header
+    questArray = 0;
+    showQuestion(questArray);
+    showOptions(questArray);
+    question_count = 0;
+    showQuestion(question_count);
+    showOptions(question_count);
 });
+
+cat2.addEventListener("click", function () {
+    catMain.style.display = "none"; // Close category window
+    gameWindow.style.display = "flex"; // Opens the game
+    header.style.display = "flex"; // Opens the header
+    questArray = 1;
+    showQuestion(questArray);
+    showOptions(questArray);
+    question_count = 0;
+    showQuestion(question_count);
+    showOptions(question_count);
+});
+
+console.log(questArray)
+
 
 playAgainBtn.addEventListener("click", function () {
     endGame.style.display = "none"; //Closes the End game window
@@ -99,22 +184,37 @@ playAgainBtn.addEventListener("click", function () {
 // Adds the question text from the questions array to the question text area
 function showQuestion(count) {
     let question = document.getElementById("question-text");
+    if (questArray === 0) {
+        question.innerText = `${questions[count].question}`
+    }
+    if (questArray === 1) {
+        question.innerText = `${questions2[count].question}`
+    }
 
-    question.innerText = `${questions[count].question}`
 }
 
 // Adds the options text from the questions array to the answers buttons
 function showOptions(count) {
+
+    
     let option1 = document.getElementById("answer1");
     let option2 = document.getElementById("answer2");
     let option3 = document.getElementById("answer3");
     let option4 = document.getElementById("answer4");
-    let [first, second, third, fourth] = questions[count].option;
-
-    option1.innerText = `${first}`;
-    option2.innerText = `${second}`;
-    option3.innerText = `${third}`;
-    option4.innerText = `${fourth}`;
+    if (questArray === 0) {
+        let [first, second, third, fourth] = questions[count].option;
+        option1.innerText = `${first}`;
+        option2.innerText = `${second}`;
+        option3.innerText = `${third}`;
+        option4.innerText = `${fourth}`;
+    }
+    if (questArray === 1) {
+        let [first, second, third, fourth] = questions2[count].option;
+        option1.innerText = `${first}`;
+        option2.innerText = `${second}`;
+        option3.innerText = `${third}`;
+        option4.innerText = `${fourth}`;
+    }
 }
 
 // Toogle correct or incorrect selected option
@@ -123,16 +223,17 @@ for (let i = 0; i < options.length; i++) {
         nextBtn.style.display = "flex";
         let clickedOption = event.target.innerText;
         let correctAnswer = questions[question_count].answer;
-        if (clickedOption === correctAnswer) {
+        let correctAnswer2 = questions2[question_count].answer;
+        if (clickedOption === correctAnswer || clickedOption === correctAnswer2) {
             correct = true; // set "correct" variable to true if answer is correct
         }
-        if (clickedOption !== correctAnswer) {
+        if (clickedOption !== correctAnswer && clickedOption !== correctAnswer2) {
             correct = false; // set "false" variable to true if answer is incorrect
         }
     });
 }
 
- //Updates points
+//Updates points
 function givePoint() {
     points++;
     score.innerText = `${points}`;
@@ -177,6 +278,3 @@ document.addEventListener('keydown', function (e) {
         nextQ();
     }
 });
-
-
-  
