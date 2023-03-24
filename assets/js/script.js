@@ -3,6 +3,7 @@ let options = document.getElementsByClassName("option"); // Answer buttons
 let tutWindow = document.getElementById("tutorial"); // Tutorial Window
 let gameWindow = document.getElementById("game-container"); // Game-container window
 let header = document.querySelector('header'); // Header bar
+let footer = document.getElementById("footer") // Footer
 let nextBtn = document.getElementById("next-btn-div"); // Next question button
 let playAgainBtn = document.getElementById("playAgain"); // Play Again button
 let endGame = document.getElementById("endDiv"); // End game screen
@@ -160,12 +161,14 @@ cat1.addEventListener("click", function () {
     catMain.style.display = "none"; // Close category window
     gameWindow.style.display = "flex"; // Opens the game
     header.style.display = "flex"; // Opens the header
+    footer.style.display = "none";
     questArray = 0;
     showQuestion(questArray);
     showOptions(questArray);
     question_count = 0;
     showQuestion(question_count);
     showOptions(question_count);
+
 });
 
 /**
@@ -175,6 +178,7 @@ cat2.addEventListener("click", function () {
     catMain.style.display = "none"; // Close category window
     gameWindow.style.display = "flex"; // Opens the game
     header.style.display = "flex"; // Opens the header
+    footer.style.display = "none";
     questArray = 1;
     showQuestion(questArray);
     showOptions(questArray);
@@ -195,6 +199,7 @@ playAgainBtn.addEventListener("click", function () {
     points = 0; // Reset Scoreboard
     score.innerText = `${points}`;
     nextBtn.style.display = "none";
+    footer.style.display = "flex";
 });
 
 

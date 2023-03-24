@@ -8,12 +8,11 @@
 
 /*Body Style*/
 body {
-    background-color: black;
-    align-items: center;
     display: flex;
     flex-direction: column;
-    height: auto;
-    width: auto;
+    background-color: black;
+    align-items: center;
+    height: 100%;
 }
 
 /*Header Style*/
@@ -169,7 +168,7 @@ header h3 {
 }
 
 /*Category button div*/
-.category-div{
+.category-div {
     display: flex;
     flex-direction: row;
     background-color: transparent;
@@ -190,7 +189,7 @@ header h3 {
 }
 
 /*Category text class*/
-.category{
+.category {
     display: flex;
     align-self: stretch;
     width: 100%;
@@ -209,13 +208,10 @@ header h3 {
 
 /*Game container. Containing questions and answers*/
 #game-container {
-    position: relative;
     display: none;
     align-items: flex-end;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-
+    margin-bottom: 10px;
 }
 
 /*Question area. Containing current question*/
@@ -271,11 +267,11 @@ header h3 {
 
 /*Answer option "option" class style*/
 .option {
-        display: flex;
-        align-self: stretch;
-        width: 100%;
-        justify-content: center;
-    }
+    display: flex;
+    align-self: stretch;
+    width: 100%;
+    justify-content: center;
+}
 
 /*Answer text style*/
 .answer-div p {
@@ -332,10 +328,22 @@ header h3 {
 
 /*Next question button text style*/
 #next-btn-div p {
-    padding: 5px;
     color: white;
     font-family: 'Prata', serif;
 
+}
+
+/*Footer style*/
+#footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
+/*Footer text style*/
+#footer p {
+    color: white;
+    text-align: center;
 }
 
 /*media query for screens with height smaller 627px*/
