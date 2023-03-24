@@ -23,7 +23,8 @@ Imaged made using [https://ui.dev/amiresponsive](https://ui.dev/amiresponsive)
     * [Validators](#Validators)
 * [Features](#Features)
      * [Header and Navigation](#Header-and-Navigation)
-     * [Index](#Index)
+     *  [Footer](#Footer)
+     * [Index](#Index-page)
      * [Features Implemented](#features-implemented)
      * [Features Left to Implement](#Features-Left-to-Implement)
 * [Thanks to](#thanks-to)
@@ -32,13 +33,18 @@ Imaged made using [https://ui.dev/amiresponsive](https://ui.dev/amiresponsive)
     ## Index:
     There is only one page, but 3 different divs and sections are activated and deactivated inside it.
 
-    * The Tutorial div:
-        * What the player i greeted with. It was a small explanation of the game and how to play it. At the buttom of the div there is a "continue" button that closes the div and opens the game-container.
+* The Tutorial div:
+* What the player i greeted with. It was a small explanation of the game and how to play it. At the buttom of the div there is a "continue" button that closes the div and opens the game-container.
+    
 
-    ![Image of tutorial page](/assets/images/readme-tutorial.PNG "Image of tutorial page")
 
-    * The Game-container section:
-        * In this quiz, the player is presented with four possible answers and is required to pick the correct one. After selecting an answer the next-button appears. After answering the last question the game-container closes and the end game div opens.
+![Image of tutorial page](/assets/images/readme-tutorial.PNG "Image of tutorial page")
+
+* Here the user can pick one of two categories. 90's music and space <br>
+![Image of tutorial page](/assets/images/readme-categories.PNG "Image of tutorial page")
+
+* The Game-container section:
+* In this quiz, the player is presented with four possible answers and is required to pick the correct one. After selecting an answer the next-button appears. After answering the last question the game-container closes and the end game div opens.
 
 ![Image of question page](/assets/images/readme-question-page.PNG "Image of question page")
                 
@@ -132,9 +138,13 @@ This is what i scetched up before I started coding.
 # Features
 
 ## Header
-* The header has the game logo and the scoreboard .
+* The header has the game logo and the scoreboard. <br>
+![Image of the header](assets/images/readme-header.PNG "Image of the header")
 
-## Index
+## Footer
+![Image of the header](assets/images/readme-footer.PNG "Image of the header")
+
+## Index Page
 * The index page is i collected everything. Tutorial, quiz and end screen.
 
 ## Features Implemented:
