@@ -15,8 +15,11 @@ let catMain = document.getElementById("categories"); //Category window
 let cat1 = document.getElementById("category1"); //Category 90's music
 let cat2 = document.getElementById("category2"); // Category Space
 score.innerText = `${points}`;
-let questArray = 0;
-// Question and answer array
+let questArray = 0; // Picks catergory questions array
+
+/**
+* 90's music question and answer array
+*/
 let questions = [{
         id: 1,
         question: "Who had a hit with 'Smells Like Teen Spirit' in 1991?",
@@ -73,6 +76,10 @@ let questions = [{
         ]
     },
 ];
+
+/**
+* Space question and answer array
+*/
 let questions2 = [{
         id: 1,
         question: "Which planet in our solar system is closest to the Sun?",
@@ -129,18 +136,26 @@ let questions2 = [{
         ]
     },
 ];
-// Loads question and answers
+
+/**
+* Loads question and answers
+*/
 window.onload = function () {
     showQuestion(question_count);
     showOptions(question_count);
 };
 
-// Tutorial continue button
+/**
+* Tutorial continue button
+*/
 continueBtn.addEventListener("click", function () {
     tutWindow.style.display = "none"; //Closes the tutorial window
     catMain.style.display = "flex"; // Opens the category window
 });
 
+/**
+* Pick 90's music button
+*/
 cat1.addEventListener("click", function () {
     catMain.style.display = "none"; // Close category window
     gameWindow.style.display = "flex"; // Opens the game
@@ -153,6 +168,9 @@ cat1.addEventListener("click", function () {
     showOptions(question_count);
 });
 
+/**
+* Pick space category button
+*/
 cat2.addEventListener("click", function () {
     catMain.style.display = "none"; // Close category window
     gameWindow.style.display = "flex"; // Opens the game
@@ -165,9 +183,9 @@ cat2.addEventListener("click", function () {
     showOptions(question_count);
 });
 
-console.log(questArray)
-
-
+/**
+* Play again button
+*/
 playAgainBtn.addEventListener("click", function () {
     endGame.style.display = "none"; //Closes the End game window
     tutWindow.style.display = "flex"; //Closes the tutorial window
@@ -181,7 +199,9 @@ playAgainBtn.addEventListener("click", function () {
 
 
 
-// Adds the question text from the questions array to the question text area
+/**
+* Adds the question text from the questions array to the question text area
+*/
 function showQuestion(count) {
     let question = document.getElementById("question-text");
     if (questArray === 0) {
@@ -193,14 +213,16 @@ function showQuestion(count) {
 
 }
 
-// Adds the options text from the questions array to the answers buttons
+/**
+* Adds the options text from the questions array to the answers buttons
+*/
 function showOptions(count) {
 
-    
     let option1 = document.getElementById("answer1");
     let option2 = document.getElementById("answer2");
     let option3 = document.getElementById("answer3");
     let option4 = document.getElementById("answer4");
+
     if (questArray === 0) {
         let [first, second, third, fourth] = questions[count].option;
         option1.innerText = `${first}`;
@@ -217,7 +239,10 @@ function showOptions(count) {
     }
 }
 
-// Toogle correct or incorrect selected option
+
+/**
+* Toogle correct or incorrect selected option
+*/
 for (let i = 0; i < options.length; i++) {
     options[i].addEventListener("click", function (event) {
         nextBtn.style.display = "flex";
@@ -233,13 +258,17 @@ for (let i = 0; i < options.length; i++) {
     });
 }
 
-//Updates points
+/**
+* Updates points
+*/
 function givePoint() {
     points++;
     score.innerText = `${points}`;
 }
 
-//Next question button function
+/**
+* Next question button function
+*/
 function nextQ() {
     if (question_count == questions.length - 1) {
         gameWindow.style.display = "none";
@@ -272,7 +301,9 @@ function nextQ() {
     }
 }
 
-//If the next button is visible you can press "5" to click it
+/**
+* If the next button is visible you can press "5" to click it
+*/
 document.addEventListener('keydown', function (e) {
     if (e.code === 'Digit5' && nextBtn.style.display === "flex") {
         nextQ();
