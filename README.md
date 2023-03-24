@@ -24,6 +24,7 @@ Imaged made using [https://ui.dev/amiresponsive](https://ui.dev/amiresponsive)
 * [Features](#Features)
      * [Header and Navigation](#Header-and-Navigation)
      * [Index](#Index)
+     * [Features Implemented](#features-implemented)
      * [Features Left to Implement](#Features-Left-to-Implement)
 * [Thanks to](#thanks-to)
 
@@ -134,6 +135,13 @@ This is what i scetched up before I started coding.
 
 ## Index
 * The index page is i collected everything. Tutorial, quiz and end screen.
+
+## Features Implemented:
+* Tutorial page
+* Able to pick 1 of 4 answer for each questions
+* Next question button appears if you pick a question only
+* Gives a score if correct and adds it to the scoreboard at the top right corner
+* When finished the game an end screens appears and gives you the final score and the ability to play again
 
 ## Features Left to Implement:
 * More questions categories
