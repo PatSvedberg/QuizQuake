@@ -25,10 +25,7 @@ Imaged made using [https://ui.dev/amiresponsive](https://ui.dev/amiresponsive)
      * [Header and Navigation](#Header-and-Navigation)
      * [Index](#Index)
      * [Features Left to Implement](#Features-Left-to-Implement)
-* [Content](#Content)
-    * [Content](#Inspirations)
-    * [Media](#Media)
-    * [Acknowledgments](#Acknowledgments)
+* [Thanks to](#thanks-to)
 
     # Pages:
     ## Index:
@@ -145,17 +142,10 @@ This is what i scetched up before I started coding.
 * Animations
 * Submit score
 
-<br />
-
-# Content
-## Media:
-The social media icons were taken from [Font Awesome](https://fontawesome.com/)
-    
-## Inspirations and help:
-* Got some help from this video by [PRAROZ](https://youtu.be/1ydfKDwsYbU)
-
-# Acknowledgments:
-
 ## Thanks to:
-### Lauren-Nicole Popich
-* My mentor. For helpt end encouragement!
+* Got some help from this video by [PRAROZ](https://youtu.be/1ydfKDwsYbU)
+* [W3schools](https://www.w3schools.com/js/)
+* [Stack Overflow](https://stackoverflow.com/questions/tagged/javascript)
+* Code Institute Tutor Assistance
+* Lauren-Nicole Popich - My mentor. For helpt end encouragement!
+
