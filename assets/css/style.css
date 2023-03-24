@@ -207,11 +207,11 @@ header h3 {
 
 /*Answer option "option" class style*/
 .option {
-    display: flex;
-    align-self: stretch;
-    justify-content: end;
-    width: 100%;
-}
+        display: flex;
+        align-self: stretch;
+        width: 100%;
+        justify-content: center;
+    }
 
 /*Answer text style*/
 .answer-div p {
