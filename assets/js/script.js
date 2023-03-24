@@ -202,8 +202,6 @@ playAgainBtn.addEventListener("click", function () {
     footer.style.display = "flex";
 });
 
-
-
 /**
 * Adds the question text from the questions array to the question text area
 */
@@ -243,7 +241,6 @@ function showOptions(count) {
         option4.innerText = `${fourth}`;
     }
 }
-
 
 /**
 * Toogle correct or incorrect selected option
